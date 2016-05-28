@@ -45,7 +45,11 @@ median(sum_steps$x)
 ```r
 mean_steps = aggregate(clean_data$steps, list(date=clean_data$date), mean)
 mean_steps$dateobj = strptime(mean_steps$date, "%Y-%m-%d")
-plot(x=mean_steps$dateobj, y=mean_steps$x, xlab = "Date", ylab = "Average Steps", type="l", main = "Average Number Of Steps Taken In Each 5-Minute Interval by Day")
+plot(
+    x=mean_steps$dateobj, y=mean_steps$x, 
+    xlab = "Date", ylab = "Average Steps", type="l", 
+    main = "Average Number Of Steps Taken In Each 5-Minute Interval by Day"
+)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
